@@ -72,6 +72,8 @@ ENV PATH="${HOME}/go/bin:${HOME}/.local/bin:/usr/local/go/bin:${PATH}"
 
 # AI tools
 RUN bash -c "source $HOME/.nvm/nvm.sh && npm install -g @charmland/crush @openai/codex @google/gemini-cli"
+RUN bash -c "source $HOME/.nvm/nvm.sh && npm install -g @earendil-works/pi-coding-agent"
+RUN bash -c "source $HOME/.nvm/nvm.sh && npm install -g agent-browser && agent-browser install"
 RUN curl -fsSL https://claude.ai/install.sh | bash
 RUN curl -fsSL https://opencode.ai/install | bash
 
